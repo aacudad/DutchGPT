@@ -1,0 +1,11 @@
+[project]
+name = "dutchgpt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openai>=1.69.0",
+    "tiktoken>=0.9.0",
+    "torch>=2.6.0",
+]
