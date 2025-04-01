@@ -87,18 +87,12 @@ Why this repo exists:
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
-4. **Install all dependencies from `requirements.txt`**  
+4. **Install all dependencies from `uv.lock`**  
    ```bash
-   uv pip install -r requirements.txt
+   uv sync
    ```
 
-> ☑️ Your `requirements.txt` should include:
-```
-torch
-transformers
-accelerate
-unsloth????????????CHECK
-```
+> ⚠️ `uv` is the recommended method for reproducibility, performance, and consistency across environments.
 
 #### 🐢 Alternatively: Use `pip` (less preferred)
 
@@ -112,7 +106,13 @@ source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-> ⚠️ `uv` is the recommended method for reproducibility, performance, and consistency across environments.
+> ☑️ Your `requirements.txt` should include:
+```
+torch
+transformers
+accelerate
+unsloth????????????CHECK
+```
 
 ---
 

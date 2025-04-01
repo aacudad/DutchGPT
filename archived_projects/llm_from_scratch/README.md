@@ -2,7 +2,7 @@
 
 ## Overview
 
-This subproject represents an experimental attempt to build a basic large language model (LLM) architecture from scratch using PyTorch. The goal was to gain hands-on experience with the internal mechanics of transformer-based models by manually implementing core components, prior to any reliance on high-level libraries or pretrained models.
+This subproject represents an experimental attempt to build a basic large language model (LLM) architecture from scratch using PyTorch. The goal was to gain hands-on experience with the internal mechanics of transformer-based models by manually implementing core components.
 
 ## Project Motivation
 
@@ -26,7 +26,7 @@ Despite this shift, the exploratory work done here represents a serious attempt 
 
 ## Context & Data
 
-- `text.ipynb`:  
+- `train_data.ipynb`:  
   This notebook demonstrates how the input data was ingested and formatted for early-stage language modeling experiments.
   
   **Key Steps:**
@@ -47,7 +47,7 @@ Despite this shift, the exploratory work done here represents a serious attempt 
   - Parameter initialization tests  
   - Dimensionality validation and architectural sketches  
 
-- `text.ipynb`:  
+- `train_data.ipynb`:  
   Preprocessing logic for building a character-level dataset and vocabulary.
 
 ## Potential Future Work
