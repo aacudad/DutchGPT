@@ -36,7 +36,6 @@ Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on
 - 🐑 [Hugging Face](https://huggingface.co)
 - 🦙 [Ollama](https://ollama.ai)
 
----
 
 ## 🎯 Motivation
 
@@ -65,7 +64,8 @@ Why this repo exists:
 
 > ❌ **You do NOT need this** if you only want to run inference via **Ollama** or **Hugging Face**.
 
----
+
+
 
 #### ✅ Recommended: Use `uv` for reproducible environments
 
@@ -100,8 +100,6 @@ accelerate
 unsloth????????????CHECK
 ```
 
----
-
 #### 🐢 Alternatively: Use `pip` (less preferred)
 
 If you prefer the classic `pip` approach:
@@ -113,8 +111,6 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-
----
 
 > ⚠️ `uv` is the recommended method for reproducibility, performance, and consistency across environments.
 
@@ -143,7 +139,7 @@ pip install -r requirements.txt
 
 2. **Install it** and follow instructions to get started.
 
----
+3. **Pull and run the model**:
 
 ```bash
 ollama pull <model-name>
@@ -221,7 +217,7 @@ This repository includes two Python scripts that handle model loading, quantized
 | `GEMMA.py`   | Fine-tuning & inference pipeline for **Gemma3 4b**  |
 | `llama3b.py` | Fine-tuning & inference pipeline for **LLaMA3.2 3b**|
 
----
+
 
 ### 🟢 [Gemma3-4b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – Gemma3 4b (Dutch)
 
@@ -251,7 +247,7 @@ model, tokenizer = FastModel.from_pretrained(
 #### 🛠️ Use Case:
 Efficient fine-tuning or inference with Gemma3 4b in **Dutch**, with **low memory** footprint and fast startup time.
 
----
+
 
 ### 🔵 [LLaMa3.2-3b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – LLaMA3.2 3b (Dutch)
 
@@ -290,11 +286,6 @@ High-throughput inference or long-form fine-tuning with LLaMA3.2 3b using **long
 - 🔁 LoRA adapters allow rapid fine-tuning with minimal compute.
 - 🧠 All models were trained on an **NVIDIA RTX A6000 (48 GB VRAM)**, enabling large-batch, long-context training.
 - 🧪 Fully reproducible and modifiable—designed for research and production.
-
----
-
-> 💡 Tip: These scripts can be extended to include dataset loading, evaluation loops, and custom prompt templates for advanced Dutch NLP tasks.
-
 
 ---
 
@@ -351,5 +342,3 @@ This project shows how to fine-tune, deploy, and evaluate LLMs for low-resource 
 Feel free to reach out with questions or collaboration ideas:  
 **Adnane Acudad** – aacudad@tudelft.com
 **Akram Chakrouni** – achakrouni@tudelft.com
-
----
