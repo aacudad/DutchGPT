@@ -18,8 +18,16 @@ client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # List of models to try
 models = [
-    "gemini-1.5-pro",  # Using more mainstream models
-    "gemini-1.5-flash"  # Using more mainstream models
+    "gemini-2.0-flash-exp-image-generation",
+    "gemini-2.0-flash",
+    "gemini-2.0-flash-exp",
+    "gemini-2.0-flash-lite-001",
+    "gemini-2.0-pro-exp-02-05",
+    "gemini-1.5-flash-001",
+    "gemini-1.5-flash-002",
+    "gemini-1.5-flash-8b",
+    "gemini-1.5-pro",
+    "gemini-2.0-flash-001"
 ]
 
 def extract_conversations(text: str) -> List[Dict[str, str]]:
