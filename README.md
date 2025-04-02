@@ -60,7 +60,7 @@ Why this repo exists:
 
 ### 🐍 Install Python Dependencies (⚠️ Only if you want to explore or modify the code)
 
-> 🧑‍💻 This section is **only relevant if you want to dive into the codebase**, perform custom training, or run the models using Python (e.g., via scripts like `GEMMA.py` or `llama3b.py`). 
+> This section is **only relevant if you want to dive into the codebase**, perform custom training, or run the models using Python (e.g., via scripts like `GEMMA.py` or `llama3b.py`). 
 
 > ❌ **You do NOT need this** if you only want to run inference via **Ollama** or **Hugging Face**.
 
