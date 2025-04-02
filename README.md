@@ -111,7 +111,7 @@ pip install -r requirements.txt
 torch
 transformers
 accelerate
-unsloth????????????CHECK
+unsloth
 ```
 
 ---
@@ -340,5 +340,5 @@ This project shows how to fine-tune, deploy, and evaluate LLMs for low-resource 
 ## 📬 Contact
 
 Feel free to reach out with questions or collaboration ideas:  
-**Adnane Acudad** – aacudad@tudelft.com
-**Akram Chakrouni** – achakrouni@tudelft.com
+**Adnane Acudad** – aacudad@tudelft.nl
+**Akram Chakrouni** – achakrouni@tudelft.nl
