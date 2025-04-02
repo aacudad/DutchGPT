@@ -29,11 +29,11 @@
 
 This repository contains **two Dutch-enhanced LLMs**:
 
-- 🟢 **Gemma3 4b** – already decent in Dutch, further optimized.
-- 🔵 **LLaMA3.2 3b** – initially poor at Dutch, now upgraded.
+- **Gemma3 4b** – already decent in Dutch, further optimized.
+- **LLaMA3.2 3b** – initially poor at Dutch, now upgraded.
 
 Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on:
-- 🐑 [Hugging Face](https://huggingface.co/aacudad)
+- 🤗 [Hugging Face](https://huggingface.co/aacudad)
 - 🦙 [Ollama](https://ollama.com/aacudad)
 
 
@@ -41,10 +41,10 @@ Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on
 
 Why this repo exists:
 
-- 🟨 Improve Dutch performance of **LLaMA3.2 3b**, which underperforms out of the box.
-- 🟩 Push **Gemma3 4b** to a higher level of Dutch fluency.
-- 🧪 Use efficient methods (LoRA, QLoRA, Flash Attention) for resource-aware fine-tuning.
-- 🎓 Make it approachable for **non-technical users** via simple deployment and usage instructions.
+- Improve Dutch performance of **LLaMA3.2 3b**, which underperforms out of the box.
+- Push **Gemma3 4b** to a higher level of Dutch fluency.
+- Use efficient methods (LoRA, QLoRA, Flash Attention) for resource-aware fine-tuning.
+- Make it approachable for **non-technical users** via simple deployment and usage instructions.
 
 ---
 
@@ -179,19 +179,19 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 ---
 
-## 🧪 Fine-Tuning Approach
+## Fine-Tuning Approach
 
 All models were fine-tuned with [Unsloth](https://unsloth.ai) using:
 
-- **🔁 LoRA (Low-Rank Adaptation)**  
+- **LoRA (Low-Rank Adaptation)**  
   Efficiently fine-tunes a few layers without updating the full model.  
   📄 [Paper](https://arxiv.org/abs/2106.09685)
 
-- **⚡ QLoRA**  
+- **QLoRA**  
   Combines quantization with LoRA for low-resource hardware.  
   📄 [Paper](https://arxiv.org/pdf/2305.14314)
 
-- **⚡ Flash Attention**  
+- **Flash Attention**  
   Fast and memory-efficient attention module for large models.  
   📄 [Repo](https://github.com/HazyResearch/flash-attention)
 
@@ -243,7 +243,7 @@ This repository includes two Python scripts that handle model loading, quantized
 
 
 
-### 🟢 [Gemma3-4b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – Gemma3 4b (Dutch)
+###[Gemma3-4b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – Gemma3 4b (Dutch)
 
 This script loads and prepares the `unsloth/gemma-3-4b-it` model using Unsloth's `FastModel`.
 
@@ -273,7 +273,7 @@ Efficient fine-tuning or inference with Gemma3 4b in **Dutch**, with **low memor
 
 
 
-### 🔵 [LLaMa3.2-3b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – LLaMA3.2 3b (Dutch)
+###[LLaMa3.2-3b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – LLaMA3.2 3b (Dutch)
 
 This script loads the `unsloth/Llama-3.2-3B` model using `FastLanguageModel`, which supports larger context sizes and broader model support.
 
@@ -306,10 +306,10 @@ High-throughput inference or long-form fine-tuning with LLaMA3.2 3b using **long
 
 ### ⚙️ Shared Best Practices
 
-- ✅ Both scripts use **Unsloth's quantized, efficient backends**.
-- 🔁 LoRA adapters allow rapid fine-tuning with minimal compute.
-- 🧠 All models were trained on an **NVIDIA RTX A6000 (48 GB VRAM)**, enabling large-batch, long-context training.
-- 🧪 Fully reproducible and modifiable—designed for research and production.
+- Both scripts use **Unsloth's quantized, efficient backends**.
+- LoRA adapters allow rapid fine-tuning with minimal compute.
+- All models were trained on an **NVIDIA RTX A6000 (48 GB VRAM)**, enabling large-batch, long-context training.
+- Fully reproducible and modifiable—designed for research and production.
 
 ---
 
@@ -326,9 +326,9 @@ High-throughput inference or long-form fine-tuning with LLaMA3.2 3b using **long
   ![Benchmark](path/to/benchmark_graph.png)
 
 #### 📌 Analysis
-- 🔸 Observation 1  
-- 🔸 Observation 2  
-- 🔸 Observation 3  
+- Observation 1  
+- Observation 2  
+- Observation 3  
 
 ---
 
@@ -336,9 +336,9 @@ High-throughput inference or long-form fine-tuning with LLaMA3.2 3b using **long
 
 Fill this section after experimentation:
 
-- ⚠️ Weaknesses observed  
-- ✅ Strengths gained post-fine-tuning  
-- 🧠 Qualitative examples
+- Weaknesses observed  
+- Strengths gained post-fine-tuning  
+- Qualitative examples
 
 ---
 
