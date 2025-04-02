@@ -222,13 +222,13 @@ We used a combination of **existing open datasets**, **translated corpora**, **s
 
 ### 📊 Dataset Overview
 
-| Source                                   | Count     | Purpose                                      |
-|------------------------------------------|-----------|----------------------------------------------|
-| `ultrachat_200k_dutch`                   | 200,000   | Instruction tuning baseline                  |
-| Translated Nemotron (via Gemini API)     | 7,500     | Instruction diversity via translation        |
-| Synthetic (GPT-4o-mini + Gemini APIs)    | 80,000    | General-domain instruction generation        |
-| Summarized Cases (rechtspraak.nl)        | 5,000     | Long-form legal summarization tuning         |
-| **Total**                                | **~292,500** | Merged and shuffled before fine-tuning     |
+| Source                                   | Count     | Purpose                                      |   Link                                                            |
+|------------------------------------------|-----------|----------------------------------------------|-------------------------------------------------------------------|
+| `ultrachat_200k_dutch`                   | 200,000   | Instruction tuning baseline                  | (https://huggingface.co/datasets/BramVanroy/ultrachat_200k_dutch)   |    
+| Translated Nemotron (via Gemini API)     | 7,500     | Instruction diversity via translation        | (https://huggingface.co/datasets/aacudad/8K_DUTCH_NEMOTRON_TRANSLATION) |
+| Synthetic (GPT-4o-mini + Gemini APIs)    | 80,000    | General-domain instruction generation        | (https://huggingface.co/datasets/aacudad/86k_DUTCH_conversational) |
+| Summarized Cases (rechtspraak.nl)        | 5,000     | Long-form legal summarization tuning         | (https://huggingface.co/datasets/aacudad/5K_DUTCH_LEGAL_SUMMARY)  |
+| **Total**                                | **~292,500** | Merged and shuffled before fine-tuning     |                                                                  |
 
 ---
 
