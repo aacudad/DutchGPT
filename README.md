@@ -5,7 +5,7 @@
 <!-- ![Language](https://img.shields.io/badge/language-Dutch-blue) -->
 ![Status](https://img.shields.io/badge/status-Experimental-yellow)
 
-> 🧠 Fine-tuning Gemma3 4b and LLaMA3.2 3b to **speak better Dutch** and handle tasks like **summarization** and **understanding** in a low-resource setting.
+> 🧠 Fine-tuning Gemma3-4b and LLaMA3.2-3b to **speak better Dutch** and handle tasks like **summarization** and **understanding** in a low-resource setting.
 
 ---
 
@@ -14,11 +14,10 @@
 - [🎯 Motivation](#-motivation)
 - [⚙️ Environment Setup](#️-environment-setup)
 - [🚀 Inference Guide](#-inference-guide)
-- [🧪 Fine-Tuning Approach](#-fine-tuning-approach)
 - [📂 Data Collection](#-data-collection)
 - [🧾 Code Structure](#-code-structure)
-- [📊 Results (Template)](#-results-template)
-- [🔍 Observations (Template)](#-observations-template)
+- [📊 Results](#-results)
+- [🔍 Observations](#-observations)
 - [✅ Conclusion](#-conclusion)
 - [📚 References](#-references)
 - [📬 Contact](#-contact)
@@ -29,8 +28,8 @@
 
 This repository contains **two Dutch-enhanced LLMs**:
 
-- **Gemma3 4b** – already decent in Dutch, further optimized.
-- **LLaMA3.2 3b** – initially poor at Dutch, now upgraded.
+- **Gemma3:4b** – already decent in Dutch, further optimized.
+- **LLaMA3.2:3b** – initially poor at Dutch, now upgraded.
 
 Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on:
 - 🤗 [Hugging Face](https://huggingface.co/aacudad)
@@ -41,8 +40,8 @@ Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on
 
 Why this repo exists:
 
-- Improve Dutch performance of **LLaMA3.2 3b**, which underperforms out of the box.
-- Push **Gemma3 4b** to a higher level of Dutch fluency.
+- Improve Dutch performance of **LLaMA3.2:3b**, which underperforms out of the box.
+- Push **Gemma3:4b** to a higher level of Dutch fluency.
 - Use efficient methods (LoRA, QLoRA, Flash Attention) for resource-aware fine-tuning.
 - Make it approachable for **non-technical users** via simple deployment and usage instructions.
 
@@ -65,15 +64,13 @@ Why this repo exists:
 > ❌ **You do NOT need this** if you only want to run inference via **Ollama** or **Hugging Face**.
 
 
-
-
 #### ✅ Recommended: Use `uv` for reproducible environments
 
 [`uv`](https://github.com/astral-sh/uv) is a fast and modern Python package manager that simplifies dependency management and improves reproducibility. Here’s how to use it:
 
 1. **Install `uv`**
 
-   Visit [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/) and follow the installation instructions for your OS.
+  To install `uv`, visit the [official installation guide](https://docs.astral.sh/uv/getting-started/installation/) and follow the instructions for your operating system.
 
 2. **Clone the repository**  
    ```bash
@@ -118,13 +115,12 @@ unsloth
 
 ### 📥 Downloading Models
 
-- **Gemma3 4b**  
-  - 🦙 Ollama: [https://ollama.com/aacudad/gemma-3-DUTCH](https://ollama.com/aacudad/gemma-3-DUTCH)  
-  - 🤗 Hugging Face: [https://huggingface.co/aacudad/gemma-3-finetune](https://huggingface.co/aacudad/gemma-3-finetune)
+- **Gemma3:4b**  
+  - 🦙 Ollama: [aacudad/llama-3b-DUTCH](https://ollama.com/aacudad/gemma-3-DUTCH)  
+  - 🤗 Hugging Face: [aacudad/DUTCHGPT_GEMMA3_4b](https://huggingface.co/aacudad/gemma-3-finetune)
 
-- **LLaMA3.2 3b**  
-  - 🦙 Ollama: [LINK_PLACEHOLDER](#)  
-  - 🤗 Hugging Face: [LINK_PLACEHOLDER](#)
+- **LLaMA3.2:3b**  
+  - 🦙 Ollama: [aacudad/llama-3b-DUTCH](https://ollama.com/aacudad/llama-3b-DUTCH)  
 
 ---
 
@@ -163,18 +159,33 @@ ollama run aacudad/gemma-3-DUTCH
 
 ### 🤗 Using Hugging Face (Python)
 
-????NEEDS CHECKING???????
+You can use the model hosted at [`aacudad/DUTCHGPT_GEMMA3_4b`](https://huggingface.co/aacudad/DUTCHGPT_GEMMA3_4b) with the Hugging Face `transformers` library.
+
+#### Option 1: Quick Inference with `pipeline`
+
+Use this method for quick prototyping and simple inference:
 
 ```python
+# Use a pipeline as a high-level helper
+from transformers import pipeline
+
+messages = [
+    {"role": "user", "content": "Who are you?"},
+]
+pipe = pipeline("text-generation", model="aacudad/DUTCHGPT_GEMMA3_4b")
+pipe(messages)
+```
+
+**Option 2: Full Control with `AutoTokenizer` and `AutoModelForCausalLM`**
+
+Use this approach for advanced use cases requiring manual tokenization or custom generation parameters:
+
+```python
+# Load model directly
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-tokenizer = AutoTokenizer.from_pretrained("https://huggingface.co/aacudad/gemma-3-finetune")
-model = AutoModelForCausalLM.from_pretrained("https://huggingface.co/aacudad/gemma-3-finetune")
-
-prompt = "Geef een samenvatting van de onderstaande tekst in het Nederlands: ..."
-inputs = tokenizer(prompt, return_tensors="pt")
-outputs = model.generate(**inputs)
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+tokenizer = AutoTokenizer.from_pretrained("aacudad/DUTCHGPT_GEMMA3_4b")
+model = AutoModelForCausalLM.from_pretrained("aacudad/DUTCHGPT_GEMMA3_4b")
 ```
 
 ---
@@ -224,11 +235,26 @@ We used a combination of **existing open datasets**, **translated corpora**, **s
 
 | Source                                   | Count     | Purpose                                      |   Link                                                            |
 |------------------------------------------|-----------|----------------------------------------------|-------------------------------------------------------------------|
-| `ultrachat_200k_dutch`                   | 200,000   | Instruction tuning baseline                  | (https://huggingface.co/datasets/BramVanroy/ultrachat_200k_dutch)   |    
-| Translated Nemotron (via Gemini API)     | 7,500     | Instruction diversity via translation        | (https://huggingface.co/datasets/aacudad/8K_DUTCH_NEMOTRON_TRANSLATION) |
-| Synthetic (GPT-4o-mini + Gemini APIs)    | 80,000    | General-domain instruction generation        | (https://huggingface.co/datasets/aacudad/86k_DUTCH_conversational) |
-| Summarized Cases (rechtspraak.nl)        | 5,000     | Long-form legal summarization tuning         | (https://huggingface.co/datasets/aacudad/5K_DUTCH_LEGAL_SUMMARY)  |
+| `ultrachat_200k_dutch`                   | 200,000   | Instruction tuning baseline                  | [BramVanroy/ultrachat_200k_dutch](https://huggingface.co/datasets/BramVanroy/ultrachat_200k_dutch)   |    
+| Translated Nemotron (via Gemini API)     | 7,500     | Instruction diversity via translation        | [aacudad/8K_DUTCH_NEMOTRON_TRANSLATION](https://huggingface.co/datasets/aacudad/8K_DUTCH_NEMOTRON_TRANSLATION) |
+| Synthetic (GPT-4o-mini + Gemini APIs)    | 80,000    | General-domain instruction generation        | [aacudad/86k_DUTCH_conversational](https://huggingface.co/datasets/aacudad/86k_DUTCH_conversational) |
+| Summarized Cases (rechtspraak.nl)        | 5,000     | Long-form legal summarization tuning         | [aacudad/5K_DUTCH_LEGAL_SUMMARY](https://huggingface.co/datasets/aacudad/5K_DUTCH_LEGAL_SUMMARY)  |
 | **Total**                                | **~292,500** | Merged and shuffled before fine-tuning     |                                                                  |
+
+---
+
+🧱 Pitfalls & Bottlenecks
+
+**Synthetic Training Data**
+The model has been trained partially on synthetically generated Dutch text. While this approach enables rapid dataset scaling, it can introduce uniformity in sentence structure. In practice, this may lead to outputs that occasionally feel repetitive or overly similar in phrasing.
+
+**Limited Stylistic Diversity**
+Due to the nature of the training data, the model may favor certain formulations or sentence templates. This is particularly noticeable in tasks involving longer generations or summarization, where variation is important.
+
+🔧 **Future Directions**
+- Incorporating a broader mix of real Dutch corpora
+- Improving the diversity of synthetic data sources
+- Experimenting with objective functions that encourage stylistic variation
 
 ---
 
@@ -248,7 +274,7 @@ This repository includes two Python scripts that handle model loading, quantized
 This script loads and prepares the `unsloth/gemma-3-4b-it` model using Unsloth's `FastModel`.
 
 #### 🧩 Features:
-- Loads **Gemma3 4b** with **4-bit quantization** (`bnb-4bit`) to reduce VRAM usage.
+- Loads **Gemma3:4b** with **4-bit quantization** (`bnb-4bit`) to reduce VRAM usage.
 - Enables **LoRA adapters** for efficient parameter-efficient fine-tuning.
 - Supports **4096-token context window**.
 - Built to run on consumer GPUs (e.g., A6000).
@@ -271,14 +297,12 @@ model, tokenizer = FastModel.from_pretrained(
 #### 🛠️ Use Case:
 Efficient fine-tuning or inference with Gemma3 4b in **Dutch**, with **low memory** footprint and fast startup time.
 
-
-
-###[LLaMa3.2-3b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/llama3b.py) – LLaMA3.2 3b (Dutch)
+###[LLaMa3.2-3b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/llama3b.py) – LLaMA3.2:3b (Dutch)
 
 This script loads the `unsloth/Llama-3.2-3B` model using `FastLanguageModel`, which supports larger context sizes and broader model support.
 
 #### 🧩 Features:
-- Loads **LLaMA3.2 3b** with 4-bit quantization.
+- Loads **LLaMA3.2:3b** with 4-bit quantization.
 - Supports **very long context length (16,384 tokens)**.
 - Uses Unsloth’s automatic **RoPE scaling** for long documents.
 - Compatible with both inference and LoRA-based fine-tuning.
@@ -313,13 +337,15 @@ High-throughput inference or long-form fine-tuning with LLaMA3.2 3b using **long
 
 ---
 
-## 📊 Results (Template)
+## 📊 Results
 
-> Results and graphs will be filled in post-evaluation.
+> Not done yet
 
-### 📈 Example Layout
+### 📈 Performance
 
-- **Model**: Gemma3 4b / LLaMA3.2 3b  
+> Not done yet
+
+- **Model**: Gemma3:4b / LLaMA3.2:3b  
 - **Task**: Summarization in Dutch  
 - **Metrics**: ROUGE, BLEU, latency  
 - **Graph**:  
@@ -332,9 +358,9 @@ High-throughput inference or long-form fine-tuning with LLaMA3.2 3b using **long
 
 ---
 
-## 🔍 Observations (Template)
+## 🔍 Observations
 
-Fill this section after experimentation:
+> Not done yet
 
 - Weaknesses observed  
 - Strengths gained post-fine-tuning  
