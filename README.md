@@ -33,8 +33,8 @@ This repository contains **two Dutch-enhanced LLMs**:
 - 🔵 **LLaMA3.2 3b** – initially poor at Dutch, now upgraded.
 
 Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on:
-- 🐑 [Hugging Face](https://huggingface.co)
-- 🦙 [Ollama](https://ollama.ai)
+- 🐑 [Hugging Face](https://huggingface.co/aacudad)
+- 🦙 [Ollama](https://ollama.com/aacudad)
 
 
 ## 🎯 Motivation
