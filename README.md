@@ -219,14 +219,6 @@ We used a combination of **existing open datasets**, **translated corpora**, **s
 
 ---
 
-### 🧹 Preprocessing Steps
-
-- Removed duplicate or low-effort responses (e.g., “Ik weet het niet.”)  
-- Normalized casing, punctuation, and whitespace  
-- Manually reviewed samples from translated and generated datasets  
-- Applied token-length filtering based on model context limits  
-
----
 
 ### 📊 Dataset Overview
 
