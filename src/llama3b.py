@@ -325,8 +325,8 @@ _ = model.generate(input_ids = inputs, streamer = text_streamer, max_new_tokens 
 # In[ ]:
 
 
-model.save_pretrained("llama-3-adnane")  # Local saving
-tokenizer.save_pretrained("llama-3-adnane")
+model.save_pretrained("llama-3-DUTCH")  # Local saving
+tokenizer.save_pretrained("llama-3-DUTCH")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
 # tokenizer.push_to_hub("your_name/lora_model", token = "...") # Online saving
 
