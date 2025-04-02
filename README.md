@@ -5,7 +5,7 @@
 <!-- ![Language](https://img.shields.io/badge/language-Dutch-blue) -->
 ![Status](https://img.shields.io/badge/status-Experimental-yellow)
 
-> 🧠 Fine-tuning Gemma3-4b and LLaMA3.2-3b to **speak better Dutch** and handle tasks like **summarization** and **understanding** in a low-resource setting.
+> 🧠 Fine-tuning Gemma3:4b and LLaMA3.2:3b to **speak better Dutch** and handle tasks like **summarization** and **understanding** in a low-resource setting.
 
 ---
 
