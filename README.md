@@ -168,8 +168,8 @@ ollama run aacudad/gemma-3-DUTCH
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-tokenizer = AutoTokenizer.from_pretrained("your-hf-username/gemma3-4b")
-model = AutoModelForCausalLM.from_pretrained("your-hf-username/gemma3-4b")
+tokenizer = AutoTokenizer.from_pretrained("https://huggingface.co/aacudad/gemma-3-finetune")
+model = AutoModelForCausalLM.from_pretrained("https://huggingface.co/aacudad/gemma-3-finetune")
 
 prompt = "Geef een samenvatting van de onderstaande tekst in het Nederlands: ..."
 inputs = tokenizer(prompt, return_tensors="pt")
