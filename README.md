@@ -199,13 +199,38 @@ All models were fine-tuned with [Unsloth](https://unsloth.ai) using:
 
 ## 📂 Data Collection
 
-*To be added.*
+📂 Data Collection
+We used a combination of existing open datasets, translated corpora, synthetically generated data, and real-world legal cases to create a comprehensive Dutch instruction dataset.
 
-This section will describe:
-- 📚 Data sources
-- 🧹 Preprocessing steps
-- 📊 Dataset size and distribution
+📚 Data Sources
+ultrachat_200k_dutch
+Contributed by Bram Vanroy, this dataset contains 200,000 Dutch dialogues in instruction-response format. It served as the core foundation of our fine-tuning data.
 
+NVIDIA Llama-Nemotron Post-Training Dataset
+Originally in English. We used Gemini's free API to translate about 7.5k rows into Dutch, enriching the dataset with high-quality, diverse instruction-response pairs.
+
+Synthetic Dutch Q&A Generation (Custom)
+To further diversify the instruction space, we used OpenAI's GPT-4o-mini (Paid) and Gemini’s API (Free) to generate 80,000 new Dutch instruction examples. These cover a wide range of tasks, including general knowledge, summarization, translation, and reasoning.
+
+Legal Case Summarization (rechtspraak.nl)
+We extracted and summarized ~5,000 Dutch legal cases from rechtspraak.nl using GPT-4o-mini. These were specifically used to fine-tune the models on long-text summarization tasks, with a focus on handling complex legal language and structure.
+
+🧹 Preprocessing Steps
+Removed duplicate or low-effort responses (e.g., “Ik weet het niet.”).
+
+Normalized casing, punctuation, and whitespace.
+
+Manually reviewed samples from translated and generated datasets.
+
+Token length and context-window aware filtering for long inputs.
+
+📊 Dataset Overview
+Source	Count	Purpose
+ultrachat_200k_dutch	200,000	Instruction tuning baseline
+Translated Nemotron (via Gemini API)	7,500	Instruction diversity via translation
+Synthetic (GPT-4o-mini + Gemini APIs)	80,000	Broad general-domain instruction coverage
+Summarized Cases (rechtspraak.nl)	5,000	Long-form legal summarization tuning
+Total	~292,500	Merged and shuffled before fine-tuning
 ---
 
 ## 🧾 Code Structure
