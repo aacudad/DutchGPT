@@ -1,11 +1,11 @@
-# 🇳🇱 DUTCHGPT — Fine-tuning Gemma3:4B & LLaMA3.2:3B
+# 🇳🇱 DUTCHGPT — Fine-tuning Gemma3 4B & LLaMA3.2 3B
 
 <!-- ![License](https://img.shields.io/badge/license-MIT-blue.svg) -->
 ![Models](https://img.shields.io/badge/models-fine--tuned-orange)
 <!-- ![Language](https://img.shields.io/badge/language-Dutch-blue) -->
 ![Status](https://img.shields.io/badge/status-Experimental-yellow)
 
-> 🧠 Fine-tuning Gemma3:4b and LLaMA3.2:3b to **speak better Dutch** and handle tasks like **summarization** and **understanding** in a low-resource setting.
+> 🧠 Fine-tuning Gemma3 4b and LLaMA3.2 3b to **speak better Dutch** and handle tasks like **summarization** and **understanding** in a low-resource setting.
 
 ---
 
@@ -28,8 +28,8 @@
 
 This repository contains **two Dutch-enhanced LLMs**:
 
-- **Gemma3:4b** – already decent in Dutch, further optimized.
-- **LLaMA3.2:3b** – initially poor at Dutch, now upgraded.
+- **Gemma3 4b** – already decent in Dutch, further optimized.
+- **LLaMA3.2 3b** – initially poor at Dutch, now upgraded.
 
 Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on:
 - 🤗 [Hugging Face](https://huggingface.co/aacudad)
@@ -40,8 +40,8 @@ Both models were fine-tuned with [Unsloth](https://unsloth.ai) and are hosted on
 
 Why this repo exists:
 
-- Improve Dutch performance of **LLaMA3.2:3b**, which underperforms out of the box.
-- Push **Gemma3:4b** to a higher level of Dutch fluency.
+- Improve Dutch performance of **LLaMA3.2 3b**, which underperforms out of the box.
+- Push **Gemma3 4b** to a higher level of Dutch fluency.
 - Use efficient methods (LoRA, QLoRA, Flash Attention) for resource-aware fine-tuning.
 - Make it approachable for **non-technical users** via simple deployment and usage instructions.
 
@@ -269,12 +269,12 @@ This repository includes two Python scripts that handle model loading, quantized
 
 
 
-###[Gemma3-4b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/GEMMA.py) – Gemma3 4b (Dutch)
+#### [Gemma3-4b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/GEMMA.py) – Gemma3 4b (Dutch)
 
 This script loads and prepares the `unsloth/gemma-3-4b-it` model using Unsloth's `FastModel`.
 
 #### 🧩 Features:
-- Loads **Gemma3:4b** with **4-bit quantization** (`bnb-4bit`) to reduce VRAM usage.
+- Loads **Gemma3 4b** with **4-bit quantization** (`bnb-4bit`) to reduce VRAM usage.
 - Enables **LoRA adapters** for efficient parameter-efficient fine-tuning.
 - Supports **4096-token context window**.
 - Built to run on consumer GPUs (e.g., A6000).
@@ -297,7 +297,7 @@ model, tokenizer = FastModel.from_pretrained(
 #### 🛠️ Use Case:
 Efficient fine-tuning or inference with Gemma3 4b in **Dutch**, with **low memory** footprint and fast startup time.
 
-###[LLaMa3.2-3b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/llama3b.py) – LLaMA3.2:3b (Dutch)
+#### [LLaMa3.2-3b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/llama3b.py) – LLaMA3.2:3b (Dutch)
 
 This script loads the `unsloth/Llama-3.2-3B` model using `FastLanguageModel`, which supports larger context sizes and broader model support.
 
