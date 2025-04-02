@@ -339,7 +339,7 @@ _ = model.generate(
 # In[86]:
 
 
-model.save_pretrained("gemma-3_adnane")  # Local saving
-tokenizer.save_pretrained("gemma-3_adnane")
+model.save_pretrained("gemma-3-DUTCH")  # Local saving
+tokenizer.save_pretrained("gemma-3-DUTCH")
 # model.push_to_hub("HF_ACCOUNT/gemma-3", token = "...") # Online saving
 # tokenizer.push_to_hub("HF_ACCOUNT/gemma-3", token = "...") # Online saving
