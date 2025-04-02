@@ -2,12 +2,13 @@
 
 ## Overview
 
-This subproject represents an experimental attempt to build a basic large language model (LLM) architecture from scratch using PyTorch. The goal was to gain hands-on experience with the internal mechanics of transformer-based models by manually implementing core components.
+This subproject represents an attempt to build a large language model (LLM) architecture from scratch using PyTorch. The goal was to gain hands-on experience with the internal mechanics of transformer-based models by manually implementing core components.
 
 ## Project Motivation
 
 Large language models (LLMs) like GPT and BERT have significantly advanced the field of natural language processing. Rather than treating these models as black boxes, this project was initiated to develop a foundational understanding of their architecture, including:
 
+- Tokenization
 - Embedding layers
 - Self-attention mechanisms
 - Layer normalization
@@ -16,7 +17,7 @@ Large language models (LLMs) like GPT and BERT have significantly advanced the f
 ## Current Status
 
 **⚠️ Project Status: Incomplete and Archived**  
-This project was paused early in development and is no longer actively maintained. The current work consists of architectural prototyping, dimensionality checks, and some scaffolding for transformer components.
+This project was paused early in development and is no longer actively maintained. The current work consists of architectural prototyping, dimensionality checks, and some scaffolding for transformer components. Training the current architecture will deliver some results, the model has been trained in its initial stages and delivered some decent results for the amount of data it was trained on.
 
 ## Reason for Archival
 
@@ -33,10 +34,9 @@ Despite this shift, the exploratory work done here represents a serious attempt 
   - A raw Dutch text corpus was manually provided.
   - All line breaks were stripped to form a single continuous character stream.
   - A character-level vocabulary was generated dynamically from the text.
-  - Text was encoded as integer token sequences using the vocabulary mapping (`char_to_idx` and `idx_to_char` dictionaries).
   - Basic train/validation split was performed by character index.
 
-  This character-level encoding approach aligns with the goal of building a minimal LLM prototype from the ground up, where even tokenization is kept deliberately simple.
+  This character-level encoding approach aligns with the goal of building a minimal LLM prototype from the ground up, where tokenization is kept simple by using OpenAI's tokenizer 'Tiktoken'.
 
 ## Contents
 
@@ -45,10 +45,12 @@ Despite this shift, the exploratory work done here represents a serious attempt 
   - Initial embedding and positional layers  
   - Scaled dot-product attention  
   - Parameter initialization tests  
-  - Dimensionality validation and architectural sketches  
+  - Dimensionality validation and architectural sketches
+  - Training cell
+  - Inference cell 
 
 - `train_data.ipynb`:  
-  Preprocessing logic for building a character-level dataset and vocabulary.
+  Samples of training data
 
 ## Potential Future Work
 
@@ -62,14 +64,6 @@ Although currently archived, this prototype could be extended in the future to i
 ## How to Use This
 
 This is an exploratory, standalone notebook-based experiment and is not integrated with the main project pipeline. It serves as a reference or potential template for future LLM prototyping.
-
-## License
-
-This work is provided under the MIT License. See the root repository for license details.
-
-## Attribution
-
-This experiment was authored as part of a broader NLP research project. While inactive, it is included in this repository to document the scope of exploration and learning involved. Use and contributions are welcome under research or educational contexts.
 
 ---
 
