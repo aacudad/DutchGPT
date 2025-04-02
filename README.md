@@ -1,4 +1,4 @@
-# 🇳🇱 Dutch-Language Fine-Tuned LLMs: Gemma3 4b & LLaMA3.2 3b
+# DUTCHGPT: Fine-tuning Gemma3 4b & LLaMA3.2 3b
 
 <!-- ![License](https://img.shields.io/badge/license-MIT-blue.svg) -->
 ![Models](https://img.shields.io/badge/models-fine--tuned-orange)
