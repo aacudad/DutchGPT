@@ -243,7 +243,7 @@ This repository includes two Python scripts that handle model loading, quantized
 
 
 
-###[Gemma3-4b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – Gemma3 4b (Dutch)
+###[Gemma3-4b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/GEMMA.py) – Gemma3 4b (Dutch)
 
 This script loads and prepares the `unsloth/gemma-3-4b-it` model using Unsloth's `FastModel`.
 
@@ -273,7 +273,7 @@ Efficient fine-tuning or inference with Gemma3 4b in **Dutch**, with **low memor
 
 
 
-###[LLaMa3.2-3b](https://github.com/your-username/your-repo/blob/main/docs/example.txt) – LLaMA3.2 3b (Dutch)
+###[LLaMa3.2-3b](https://github.com/aacudad/DutchGPT/blob/main/src/finetuning/llama3b.py) – LLaMA3.2 3b (Dutch)
 
 This script loads the `unsloth/Llama-3.2-3B` model using `FastLanguageModel`, which supports larger context sizes and broader model support.
 
