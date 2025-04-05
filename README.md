@@ -359,7 +359,7 @@ Below is a summary table of the results:
 
 The accompanying benchmark graph (below) illustrates the ROUGE and BLEU improvements. As shown, the Gemma3 model's performance remains essentially unchanged after fine-tuning, while the LLaMA3.2 model shows a clear improvement of approximately 6 points in ROUGE-1, 5 points in ROUGE-2, and 6 points in ROUGE-L, with a corresponding BLEU increase.
 
-![Benchmark Graph](path/to/benchmark_graph.png)
+![Benchmark Graph](b1c9aaa3-7700-4cdd-ba96-caa6c129bde8.png)
 
 ---
 
