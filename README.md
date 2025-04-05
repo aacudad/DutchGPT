@@ -359,7 +359,7 @@ Below is a summary table of the results:
 
 The accompanying benchmark graph (below) illustrates the ROUGE and BLEU improvements. As shown, the Gemma3 model's performance remains essentially unchanged after fine-tuning, while the LLaMA3.2 model shows a clear improvement of approximately 6 points in ROUGE-1, 5 points in ROUGE-2, and 6 points in ROUGE-L, with a corresponding BLEU increase.
 
-![Benchmark Graph](b1c9aaa3-7700-4cdd-ba96-caa6c129bde8.png)
+![Benchmark Graph](78972e44-5351-4d9c-900b-1abf0de683cb.png)
 
 ---
 
@@ -371,11 +371,8 @@ The accompanying benchmark graph (below) illustrates the ROUGE and BLEU improvem
 - **LLaMA3.2 3b**:  
   - **Notable Improvement**: The fine-tuned LLaMA3.2 model demonstrates significant performance gains across all metrics. ROUGE-1 increased from 40.0 to 46.0, ROUGE-2 from 17.0 to 22.0, and ROUGE-L from 36.0 to 42.0. BLEU scores similarly improved from 26.0 to 33.0.
   
-- **Qualitative Assessment**:  
-  - **Open o3 mini Grading**: The evaluation using the OpenAI o3 mini model confirmed that the fine-tuned LLaMA3.2 outputs are more fluent, contextually richer, and better capture Dutch language nuances compared to their original counterparts.
   - **Overall Implication**: These results suggest that while fine-tuning can have a significant impact on models like LLaMA3.2, models such as Gemma3 4b may require different strategies or further hyperparameter adjustments, as their performance remains near their ceiling for this task.
- 
-> This comprehensive evaluation demonstrates that fine-tuning can yield practical improvements in summarization quality for certain models, as validated by quantitative metrics and comparative evaluations using the OpenAI o3 mini model.
+
 
 ---
 
