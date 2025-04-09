@@ -5,7 +5,7 @@
 
 This repository contains code and resources for fine-tuning large language models (LLMs) for enhanced Dutch language performance, specifically focusing on tasks like summarization and comprehension in a low-resource language setting.
 
-📑 **[Read the Full Technical Report](https://github.com/aacudad/DutchGPT/blob/main/REPORT.md)** - Comprehensive details on methodology, experimental setup, and findings
+📑 **[Read the Full Technical Report](https://github.com/aacudad/DutchGPT/Dutch_GPT__Report.pdf)** - Comprehensive details on methodology, experimental setup, and findings
 
 ## 📌 Table of Contents
 
