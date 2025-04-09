@@ -217,7 +217,7 @@ Key training parameters:
 
 ### Overall Performance on Mixed Training Data
 
-![Mixed Benchmark Results](mixed_benchmarks.png)
+![Mixed Benchmark Results](updated_benchmarks.png)
 
 Analysis of mixed training set evaluation:
 - **Base Models**: Gemma3 Base generally outperforms LLaMA3.2 Base across metrics
